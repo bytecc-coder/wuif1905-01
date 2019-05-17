@@ -1,0 +1,79 @@
+.header{
+    margin: 10px 10px;
+    overflow: hidden;
+}
+.head-picture{
+    display: inline-block;
+    width: 103px;
+    height: 103px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+.head-picture>div{
+    width: 103px;
+    height: 103px;
+    display: block;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(left, crimson , greenyellow);
+    background: -o-linear-gradient(right, crimson, greenyellow);
+    background: -moz-linear-gradient(right, crimson, greenyellow);
+    background: linear-gradient(to right, crimson , greenyellow);
+    overflow: hidden;
+
+}
+.head-picture::before{
+    content: "";
+    background: url("../images/v.png") no-repeat;
+    position: absolute;
+    background-size: 22px;
+    width: 22px;
+    height: 22px;
+    right: 10px;
+    bottom: 4px;
+}
+.head-picture>div>img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 1px;
+    margin-top: 1px;
+
+}
+.header>.intro{
+    display: block;
+    float: left;
+}
+.header>.intro>h3{
+    font-size: 18px;
+    margin: 10px 0 10px;
+    display: block;
+}
+.header>.intro>p{
+    color: #666;
+    margin-bottom: 5px;
+}
+.monologue{
+    clear: both;
+    margin: 20px 0;
+    padding: 20px 10px;
+}
+.monologue>h2{
+    font-size: 18px;
+    background: url(../images/hline.png) no-repeat bottom right;
+    width: 120px;
+    clear: both;
+    background-size: 40px;
+    border-bottom: #000 1px dashed;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.monologue>p{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #333333;
+}

@@ -1,0 +1,47 @@
+.intro{
+    height: 100px;
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    overflow: hidden;
+}
+.intro>img{
+    display: block;
+    width: 132px;
+    height: 100px;
+    border-radius: 3px;
+    float: left;
+    margin-right: 20px;
+}
+.intro>h1{
+    display: block;
+    float: left;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.intro p{
+    display: block;
+    color: #666666;
+    font-size: 15px;
+    width: 860px;
+    margin-top: 50px;
+}
+.label-cloud{
+    padding: 20px;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+.label-cloud>ul>li{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 5px;
+    padding: 3px 10px;
+    margin-top:10px;
+    overflow: hidden;
+    background: #00c1de;
+}
+.label-cloud>ul>li::after{
+    clear: both;
+}

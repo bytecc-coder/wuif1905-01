@@ -1,0 +1,61 @@
+.timer{
+    width: 1140px;
+    background:#ffffff url("../images/abbg.png") no-repeat right top;
+    padding: 30px;
+}
+.timer-list>ul>li{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.timer-list>ul>li:hover a::before{
+    background: #333333;
+}
+.timer-list>ul>li>span{
+    position: relative;
+    line-height: 32px;
+    padding-right: 40px;
+    color: #999;
+    font-size: 15px;
+}
+.timer-list>ul>li>span::after{
+    content: "";
+    width: 2px;
+    height: 40px;
+    background: #e0dfdf;
+    position: absolute;
+    right: 18px;
+}
+.timer-list>ul>li>i{
+    position: relative;
+    font-style: normal;
+}
+.timer-list>ul>li>i>a{
+    font-size: 15px;
+    color: #333333;
+}
+.timer-list>ul>li>i>a::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border: 2px solid #e0dfdf;
+    position: absolute;
+    left: -31px;
+    top: 4px;
+    border-radius: 50%;
+}
+.page-list{
+    clear: both;
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+.page-list>a{
+    padding: 5px 10px;
+    color: #666666;
+    background: #f7f7f7;
+    margin: 10px 10px;
+    font-size: 15px;
+}
