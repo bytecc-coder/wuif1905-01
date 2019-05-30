@@ -130,19 +130,24 @@ aside{
     float: left;
     position: relative;
 }
+
 .next{
     width: 40px;
     height: 32px;
     position: absolute;
     top: 50%;
     margin-top: -16px;
-    opacity: 0;
+    opacity: 1;
+    z-index: 9999;
+    cursor: pointer;
 }
 .left-button{
-    left: 46px;
+    left: 75px;
 }
+
+
 .right-button{
-    right: 46px;
+    right: 75px;
 }
 .bottom-button{
     display: block;
@@ -150,6 +155,7 @@ aside{
     bottom: 14px;
     left: 50%;
     margin-left: -42px;
+    z-index: 9999;
 }
 .bottom-button>ul>li{
     display: block;
@@ -161,6 +167,10 @@ aside{
     height:10px;
     background:#ffffff;
     text-indent: -99999px;
+
+}
+.hot{
+    background: #36a8fe!important;
 }
 .next>img{
     width: 40px;
@@ -176,6 +186,11 @@ aside{
     position: absolute;
     right: 0;
     top: 0;
+    overflow: hidden;
+}
+.picture>ul>li>a>img{
+    width: 100%;
+    height: 260px;
 }
 .notice{
     float: right;
@@ -370,21 +385,21 @@ aside{
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    height: 48px;
+    /*height: 48px;*/
 }
-.diary-catalog li:hover{
+.diary-on{
     padding: 0 20px;
     background: #f7f7f7;
     border-radius: 3px;
 }
-.diary-catalog li:hover i::before{
+.diary-on i::before{
     background: #000;
 }
-.diary-catalog li:hover a{
+.diary-catalog .diary-on a{
     color: #000;
     font-weight: bold;
 }
-.diary-catalog li:hover p{
+.diary-catalog .diary-on p{
     display: -webkit-box;
 }
 .diary-catalog li:first-child i::before{
@@ -1187,4 +1202,10 @@ footer {
 }
 .statement p{
     margin-bottom: 5px;
+}
+.show{
+    display: block;
+}
+.unshow{
+    display:none;
 }

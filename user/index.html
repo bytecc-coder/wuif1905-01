@@ -5,6 +5,7 @@
     <title>首页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
 </head>
 <body>
 <!--头部及导航栏-->
@@ -45,7 +46,7 @@
         <div class="picture">
              <!-- 轮播图-->
              <ul>
-                 <li>
+                 <li style="z-index: 2">
                      <a href=""><img src="../images/1.jpg"></a>
                  </li>
                  <li>
@@ -53,6 +54,9 @@
                  </li>
                  <li>
                      <a href=""><img src="../images/3.jpg"></a>
+                 </li>
+                 <li>
+                     <a href=""><img src="../images/4.jpg"></a>
                  </li>
              </ul>
             <div>
@@ -64,7 +68,7 @@
                 </div>
                 <div class="bottom-button">
                     <ul>
-                        <li>
+                        <li class="hot">
                             0
                         </li>
                         <li>
@@ -97,7 +101,7 @@
         <div class="second">
            <!--日记导航栏-->
             <div class="diary-tab">
-                <ul>
+                <ul class="diaryTab">
                     <li class="pointer">个人博客日记</li>
                     <li>CSS3|Html5</li>
                     <li>网站建设</li>
@@ -107,7 +111,7 @@
             </div>
             <!--日记内容-->
             <div class="diary">
-                <div class="diary-list">
+                <div class="diary-list show">
                     <div class="diary-pic">
                         <ul>
                             <li>
@@ -124,9 +128,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="diary-catalog">
+                    <div class="diary-catalog diarycatalog">
                         <ul>
-                            <li>
+                            <li class="diary-on">
                                 <i></i>
                                 <a href="">安静的做一个爱设计的女子</a>
                                 <p>自从入了这行，很多人跟我说可以做网络教程，我也有考虑，但最终没有实现，因为我觉得在这个教程泛滥的时代，直接做一套免费的原创个人博客模板更为实在。每当看到自己喜欢的配色图片</p>
@@ -154,7 +158,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="diary-list">
+                <div class="diary-list unshow">
                     <div class="diary-pic">
                         <ul>
                             <li>
@@ -171,11 +175,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="diary-catalog">
+                    <div class="diary-catalog diarycatalog">
                         <ul>
-                            <li>
+                            <li class="diary-on">
                                 <i></i>
-                                <a href="">安静的做一个爱设计的女子</a>
+                                <a href="">安静的做一个爱设计的男子</a>
                                 <p>自从入了这行，很多人跟我说可以做网络教程，我也有考虑，但最终没有实现，因为我觉得在这个教程泛滥的时代，直接做一套免费的原创个人博客模板更为实在。每当看到自己喜欢的配色图片</p>
                             </li>
                             <li>
@@ -201,7 +205,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="diary-list">
+                <div class="diary-list unshow">
                     <div class="diary-pic">
                         <ul>
                             <li>
@@ -218,11 +222,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="diary-catalog">
+                    <div class="diary-catalog diarycatalog">
                         <ul>
-                            <li>
+                            <li class="diary-on">
                                 <i></i>
-                                <a href="">安静的做一个爱设计的女子</a>
+                                <a href="">安静的做一个爱设计的男子</a>
                                 <p>自从入了这行，很多人跟我说可以做网络教程，我也有考虑，但最终没有实现，因为我觉得在这个教程泛滥的时代，直接做一套免费的原创个人博客模板更为实在。每当看到自己喜欢的配色图片</p>
                             </li>
                             <li>
@@ -248,7 +252,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="diary-list">
+                <div class="diary-list unshow">
                     <div class="diary-pic">
                         <ul>
                             <li>
@@ -265,11 +269,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="diary-catalog">
+                    <div class="diary-catalog diarycatalog">
                         <ul>
-                            <li>
+                            <li class="diary-on">
                                 <i></i>
-                                <a href="">安静的做一个爱设计的女子</a>
+                                <a href="">安静的做一个爱设计的男子</a>
                                 <p>自从入了这行，很多人跟我说可以做网络教程，我也有考虑，但最终没有实现，因为我觉得在这个教程泛滥的时代，直接做一套免费的原创个人博客模板更为实在。每当看到自己喜欢的配色图片</p>
                             </li>
                             <li>
@@ -295,7 +299,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="diary-list">
+                <div class="diary-list unshow">
                     <div class="diary-pic">
                         <ul>
                             <li>
@@ -312,11 +316,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="diary-catalog">
+                    <div class="diary-catalog diarycatalog">
                         <ul>
-                            <li>
+                            <li class="diary-on">
                                 <i></i>
-                                <a href="">安静的做一个爱设计的女子</a>
+                                <a href="">安静的做一个爱设计的男子</a>
                                 <p>自从入了这行，很多人跟我说可以做网络教程，我也有考虑，但最终没有实现，因为我觉得在这个教程泛滥的时代，直接做一套免费的原创个人博客模板更为实在。每当看到自己喜欢的配色图片</p>
                             </li>
                             <li>
