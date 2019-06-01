@@ -148,4 +148,26 @@ window.onload=function () {
          });
      }
 
+    let viewh = window.innerHeight;
+    let imgs =document.querySelectorAll('.lazyload');
+    let positionarr=[];
+    imgs.forEach(function (ele) {
+        let parent = ele.offsetParent;
+        positionarr.push(parent.offsetTop + ele.offsetTop);
+    });
+    window.onscroll=function () {
+        let scrolltop = document.documentElement.scrollTop;
+        for(let i=0;i<positionarr.length;i++){
+            if(scrolltop+viewh>=positionarr[i]+50){
+                if(!imgs[i].src){
+                    imgs[i].src=imgs[i].getAttribute('aa');
+                }
+
+            }
+
+        }
+
+    }
+
+
 }
