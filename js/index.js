@@ -162,7 +162,6 @@ window.onload=function () {
                 if(!imgs[i].src){
                     imgs[i].src=imgs[i].getAttribute('aa');
                 }
-
             }
 
         }
