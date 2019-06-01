@@ -1,37 +1,111 @@
 window.onload=function () {
     //轮播图
-    let index = 0;
+    let index = 0,next=0,current=0;
     let left_btn = document.querySelector('.left-button');
     let right_btn = document.querySelector('.right-button');
     let banner = document.querySelectorAll('.picture>ul>li');
     let bottom = document.querySelectorAll('.bottom-button>ul>li');
-    function change(index){
-        banner.forEach(function (ele) {
-            ele.style.zIndex=1;
-        })
+    let w=banner[0].offsetWidth;
+    let flag=true;
+    // function change(index){
+    //     banner.forEach(function (ele) {
+    //         ele.style.zIndex=1;
+    //     })
+    //     bottom.forEach(function (elems) {
+    //         elems.classList.remove('hot');
+    //     })
+    //     banner[index].style.zIndex=2;
+    //     bottom[index].classList.add('hot');
+    // }
+    // //左右按钮
+    // left_btn.onclick = function(){
+    //     index--;
+    //     if(index<0) index=banner.length-1;
+    //     change(index);
+    // }
+    // right_btn.onclick = function(){
+    //     index++;
+    //     if(index===banner.length) index=0;
+    //     change(index);
+    // }
+    // //底部按钮
+    // for(var j=0;j<bottom.length;j++){
+    //     bottom[j].nth=j;
+    //     bottom[j].onclick=function(){
+    //         change(this.nth);
+    //         index=this.nth;
+    //     }
+    // }
+
+    //动画效果
+    function change(){
         bottom.forEach(function (elems) {
             elems.classList.remove('hot');
         })
-        banner[index].style.zIndex=2;
-        bottom[index].classList.add('hot');
+
     }
-    //左右按钮
-    left_btn.onclick = function(){
-        index--;
-        if(index<0) index=banner.length-1;
-        change(index);
+    left_btn.onclick=function(){
+        if(!flag){
+            return;
+        }
+        flag=false;
+        next--;
+        if(next<0){
+           next=banner.length-1
+        }
+        banner[next].style.left=-w+'px';
+        animate(banner[current],{left:w});
+        animate(banner[next],{left:0},function () {
+            flag=true
+        });
+        bottom[current].classList.remove('hot');
+        bottom[next].classList.add('hot');
+        current=next;
     }
-    right_btn.onclick = function(){
-        index++;
-        if(index===banner.length) index=0;
-        change(index);
+    right_btn.onclick=function(){
+        if(!flag){
+            return;
+        }
+        flag=false;
+        next++;
+        if(next==banner.length){
+            next=0;
+        }
+        banner[next].style.left=w+'px';
+        animate(banner[current],{left:-w});
+        animate(banner[next],{left:0},function () {
+            flag=true;
+        });
+        bottom[current].classList.remove('hot');
+        bottom[next].classList.add('hot');
+        current=next;
     }
-    //底部按钮
     for(var j=0;j<bottom.length;j++){
         bottom[j].nth=j;
         bottom[j].onclick=function(){
-            change(this.nth);
-            index=this.nth;
+            if(this.nth==current){
+                return;
+            }
+            animate(banner[this.nth],{left:0},function () {
+                flag=true;
+            });
+            if(current>this.nth){
+                banner[this.nth].style.left=-w+'px';
+                animate(banner[current],{left:w});
+                animate(banner[this.nth],{left:0},function () {
+                    flag=true;
+                });
+            }else{
+                banner[this.nth].style.left=w+'px';
+                animate(banner[current],{left:-w});
+                animate(banner[this.nth],{left:0},function () {
+                    flag=true;
+                });
+            }
+            bottom[current].classList.remove('hot');
+            bottom[this.nth].classList.add('hot');
+            current=this.nth;
+            next=this.nth;
         }
     }
     //自动播放
